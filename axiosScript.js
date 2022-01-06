@@ -21,6 +21,11 @@ function makerequest(){
     axios.get('data.txt').then((res) =>{
         console.log(res);
         console.log(res.data);
+    }).catch((err) =>{
+        console.log(err)
+    })
+    .then(() =>{
+        console.log("Error Cleaned!")
     })
 }
 
