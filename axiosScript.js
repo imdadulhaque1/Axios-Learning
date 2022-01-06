@@ -31,12 +31,24 @@ document.getElementById("btn").addEventListener('click', dataShowBrowser);
 // }
 
 
-// ---------> Promise Then | Showing Data in Browser
-function dataShowBrowser(){
-    // console.log("Button Clicked!");
-    //------> Show data using Promises on Browser
-    axios.get('data.txt').then((res) =>{
-        // console.log(res.data)
-        document.getElementById("divData").innerText = res.data;
-    })
+// ---------> Promise | Showing Data in Browser
+// function dataShowBrowser(){
+//     axios.get('data.txt').then((res) =>{
+//         // console.log(res.data)
+//         document.getElementById("divData").innerText = res.data;
+//     })
+// }
+
+
+// ---------> Async and Await | Showing Data in Browser
+async function dataShowBrowser(){
+    console.log("Clicked on Button")
+    config = {
+        method: 'get',
+        url: 'data.txt'
+    }
+    const res = await axios(config)
+    // console.log(res)
+    // console.log(res.data)
+    document.getElementById("divData").innerText = res.data;
 }
