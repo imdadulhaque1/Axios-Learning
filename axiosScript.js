@@ -41,14 +41,29 @@ document.getElementById("btn").addEventListener('click', dataShowBrowser);
 
 
 // ---------> Async and Await | Showing Data in Browser
+// async function dataShowBrowser(){
+//     console.log("Clicked on Button")
+//     config = {
+//         method: 'get',
+//         url: 'data.txt'
+//     }
+//     const res = await axios(config)
+//     // console.log(res)
+//     // console.log(res.data)
+//     document.getElementById("divData").innerText = res.data;
+// }
+
+
+// ---------> Async and Await | Try and Catch for error handling | Showing Data in Browser
 async function dataShowBrowser(){
-    console.log("Clicked on Button")
-    config = {
-        method: 'get',
-        url: 'data.txt'
+    try{
+        alert("Clicked the Button!");
+        const res = await axios.get('data.txt');
+        // console.log(res.data);
+        document.getElementById("divData").innerText = res.data;
+        
     }
-    const res = await axios(config)
-    // console.log(res)
-    // console.log(res.data)
-    document.getElementById("divData").innerText = res.data;
+    catch(err){
+        console.log(err)
+    }
 }
