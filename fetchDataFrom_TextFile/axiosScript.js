@@ -57,7 +57,7 @@ document.getElementById("btn").addEventListener('click', dataShowBrowser);
 // ---------> Async and Await | Try and Catch for error handling | Showing Data in Browser
 async function dataShowBrowser(){
     try{
-        alert("Clicked the Button!");
+        // alert("Clicked the Button!");
         const res = await axios.get('data.txt');
         // console.log(res.data);
         document.getElementById("divData").innerText = res.data;
