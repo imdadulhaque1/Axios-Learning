@@ -52,7 +52,7 @@ document.getElementById("btn").addEventListener('click', dataShowBrowser);
 // }
 
 
-//---------> Async and Await | Single Data
+//---------> Async and Await | Single Data | Show on Browser
 // async function dataShowBrowser(){
 
 //     try{
@@ -68,7 +68,7 @@ document.getElementById("btn").addEventListener('click', dataShowBrowser);
 //     }
 // }
 
-//---------> Async and Await | Multiple Data
+//---------> Async and Await | Multiple Data | Show on Browser
 async function dataShowBrowser(){
 
     try{
@@ -82,7 +82,7 @@ async function dataShowBrowser(){
                 <div class="bg-dark m-2 p-3 text-white">
                     <p>ID: ${element.id}</p>
                     <p>Title: ${element.title}</p>
-                    <p>Body: ${element.body}</p>
+                    <p>Body: ${element.body}</p> 
                 </div>
             `
             
